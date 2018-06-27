@@ -40,7 +40,8 @@ gmapsPolygon.controller("PolygonController", function PolygonController($scope) 
             var len = polygon.getPath().getLength();
             var htmlStr = "";
             for (var i = 0; i < len; i++) {
-                htmlStr += "new google.maps.LatLng(" + polygon.getPath().getAt(i).toUrlValue(5) + "), ";
+                console.log(polygon.getPath().getAt(i).lat());
+                htmlStr += "{lat: " + polygon.getPath().getAt(i).lat() + ", lng: "+  polygon.getPath().getAt(i).lng() + "},\n";
             }
             document.getElementById('info-'+p).innerHTML = htmlStr;
         }

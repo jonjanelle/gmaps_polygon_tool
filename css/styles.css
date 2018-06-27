@@ -1,12 +1,12 @@
 body {
   font-family: sans-serif;
   background: #222;
-  padding-top: 54px;
+  padding-top: 24px;
 }
 
 @media (min-width: 992px) {
   body {
-    padding-top: 56px;
+    padding-top: 26px;
   }
 }
 
