@@ -101,3 +101,11 @@ a:hover {
 .color-purple {
   color: #FF00FF;
 }
+
+.color-gray {
+  color: #666666;
+}
+
+#file-input {
+  background-color: #f7f7f7;
+}
