@@ -1,5 +1,13 @@
 body {
+  font-family: sans-serif;
   background: #222;
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
 }
 
 h3 {
@@ -21,20 +29,26 @@ a:hover {
 
 #map-canvas {
   width: auto;
-  height: 500px;
+  height: 550px;
 }
 
 #info {
   color: #222;
 }
 
+.sub-header {
+  color: #fff;
+}
+
 .lngLat {
   color: #fff;
   margin-bottom: 5px;
 }
+
 .lngLat .one {
   padding-left: 250px;
 }
+
 .lngLat .two {
   padding-left: 34px;
 }
@@ -48,8 +62,9 @@ a:hover {
   border-radius: 3px;
 }
 
-#info {
+.info-box {
   height: 140px;
+  width: 100%;
   float: left;
   margin-bottom: 30px;
   border: solid 2px #eee;
@@ -59,11 +74,30 @@ a:hover {
   -moz-box-shadow: inset 0 2px 5px #444;
   -webkit-box-shadow: inset 0 2px 5px #444;
   box-shadow: inset 0 2px 5px #444;
-}
-
-#info, .lngLat {
-  font-family: arial, sans-serif;
   font-size: 12px;
   padding-top: 10px;
-  width: 270px;
+}
+
+.color-red {
+  color: #FF0000;
+}
+
+.color-green {
+  color: #00FF00;
+}
+
+.color-blue {
+  color: #0000FF;
+}
+
+.color-teal {
+  color: #00FFFF;
+}
+
+.color-yellow {
+  color: #FFFF00;
+}
+
+.color-purple {
+  color: #FF00FF;
 }

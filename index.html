@@ -1,9 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gmapsPolygon">
 
-<body onload="initialize()">
-  <h3>Drag or re-shape for coordinates to display below (<a href="https://github.com/jeremy-hawes/google-maps-coordinates-polygon-tool">Github</a>)</h3>
-  <h3><a href="https://codepen.io/jhawes/blog/creating-a-real-estate-polygon-tool">See blog post</a></h3>
-  <div id="map-canvas"></div>
-  <div class="lngLat"><span class="one">Lat</span><span class="two">,Lng</span></div>
-</body>
-<button id="clipboard-btn" onclick="copyToClipboard(document.getElementById('info').innerHTML)">Copy to Clipboard</button>
-<textarea id="info"></textarea>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>GMaps Polygon Creation Tool</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body ng-controller="PolygonController">
+    <div class="text-center">
+      <h3>Create List of Polygon Vertices for Google Maps</h3>
+      <button ng-click="addPolygon()" class="btn btn-sm btn-success">Add Polygon</button>
+      <div class="sub-header">Drag and reshape polygon to rebuild coordinate list</div>
+    </div>
+    
+    <div id="map-canvas"></div>
+
+    <div class="mt-2">
+      <div class="row">
+        <div class="col-sm-3" ng-repeat="poly in polygons">
+          <div class="{{colorClasses[$index]}}">Polygon {{$index+1}}</div>
+          <textarea class="info-box" id="info-{{$index}}"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/angular.min.js"></script>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'></script>
+    <script src="js/gmapsPolygon.js"></script>
+  </body>
