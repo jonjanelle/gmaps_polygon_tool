@@ -1,6 +1,6 @@
 # gmaps_polygon_tool
 
-This is a fork of https://codepen.io/jhawes/pen/ujdgK?editors=0010
+This is an expansion of https://codepen.io/jhawes/pen/ujdgK?editors=0010
 
 Major changes: 
 1) Uses AngularJS to handle interactivity
