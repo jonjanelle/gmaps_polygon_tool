@@ -78,9 +78,9 @@ gmapsPolygon.controller("PolygonController", function PolygonController($scope) 
         var coordArray = [];
         for (var i = 0; i < dataLines.length; i++) {
             var coords = dataLines[i].split(",");
-            if (coords.length != 2) { continue; }
+            if (coords.length < 2) { continue; }
             var lat = parseFloat(coords[0].split(":")[1].trim());
-            var lng = parseFloat(coords[1].split(":")[1].trim());
+            var lng = parseFloat(coords[1].split(":")[1].replace("}", "").trim());
             coordArray.push(new google.maps.LatLng(lat, lng));
         }
         var newPolygon = initPolygon($scope.colors[ $scope.polygons.length], coordArray);
